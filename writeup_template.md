@@ -20,13 +20,13 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./output_images/undistort_output.png "Undistorted"
-[image2]: ./example/Figure_1.png "Road Transformed"
-[image3]: ./example/Figure_3.png "Binary Example"
-[image4]: ./example/Figure_2.png "Warp Example"
-[image44]: ./example/Figure_4.png 
-[image5]: ./example/Figure_6.png "Fit Visual"
-[image6]: ./example/Figure_7.png "Output"
-[image7]: ./example/Figure_8.png "Output number"
+[image2]: ./examples/Figure_1.png "Road Transformed"
+[image3]: ./examples/Figure_3.png "Binary Example"
+[image4]: ./examples/Figure_2.png "Warp Example"
+[image44]: ./examples/Figure_4.png 
+[image5]: ./examples/Figure_6.png "Fit Visual"
+[image6]: ./examples/Figure_7.png "Output"
+[image7]: ./examples/Figure_8.png "Output number"
 [video1]: ./output_images/project_video_out.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
