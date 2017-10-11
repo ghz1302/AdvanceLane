@@ -20,11 +20,13 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./output_images/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./output_images/Threshold_Image.jpg "Binary Example"
-[image4]: ./output_images/warped_Image.jpg "Warp Example"
-[image5]: ./output_images/plot_Image.jpg "Fit Visual"
-[image6]: ./output_images/result.jpg "Output"
+[image2]: ./example/Figure_1.png "Road Transformed"
+[image3]: ./example/Figure_3.png "Binary Example"
+[image4]: ./example/Figure_2.png "Warp Example"
+[image44]: ./example/Figure_4.png 
+[image5]: ./example/Figure_6.png "Fit Visual"
+[image6]: ./example/Figure_7.png "Output"
+[image7]: ./example/Figure_8.png "Output number"
 [video1]: ./output_images/project_video_out.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -58,11 +60,15 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 ![alt text][image2]
 
+I used function 'mask_image' in 2nd code cell and 'c2.undistort'.
+
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image.  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image.
 
 ![alt text][image3]
+
+I used function 'get_threshold' in 3rd code cell, after warp image.
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -103,19 +109,25 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines :
+I used histogram and sliding window.
+
+![alt text][image44]
 
 ![alt text][image5]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines 1 through 19 in the 11th code cell of the IPython notebook.
+I did this on funtion 'calculate_curves, get_center_calc' in the 9th code cell of the IPython notebook.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in the 10th code cell of the IPython notebook. Here is an example of my result on a test image:
+I implemented this step on fuction 'pipevi' in the 10th code cell of the IPython notebook. Here is an example of my result on a test image:
 
 ![alt text][image6]
+
+use funtion 'calculate_curves, get_center_calc' in the 9th code cell, caculate radius, distance from center:
+
+![alt text][image7]
 
 ---
 
@@ -130,5 +142,5 @@ Here's a [link to my video result](./output_images/project_video_out.mp4)
 ### Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+I missed to implement calculate radius and distance, so I put the codes.
+To make better pipeline, I should manipulate parameters to be right on other videos.
